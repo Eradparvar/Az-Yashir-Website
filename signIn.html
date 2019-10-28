@@ -1,6 +1,5 @@
 <!--
 TO DO
--Add "Forgot password?" link under password box
 
 -->
 
@@ -36,19 +35,20 @@ TO DO
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address (required)">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password (required)">
+                    <a href="homepage.html" class="text-secondary d-flex justify-content-end"><u>Forgot password?</u></a>
                 </div>
 
                 <div class="d-flex  justify-content-center"> <button type="submit" class="btn btn-primary ">Submit</button></div>
                 
                 <hr class="my-4">
                 
-                <small class="text-muted">Don't have an account?</small>
+                <small class="text-muted" d-flex>Don't have an account?</small>
                 <div class="d-flex justify-content-center pt-2"> <button type="submit" class="btn btn-outline-primary">Create Account</button></div>
             </form>
         </div>

@@ -12,6 +12,25 @@ TO DO
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!--    Google Maps-->
+     <script src = "https://maps.googleapis.com/maps/api/js"></script>
+
+     <script>
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436), 
+               zoom:12, 
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+			
+         google.maps.event.addDomListener(window, 'load', loadMap);
+      </script>
+      
 
     <title>Az Yashir Torah Center Youth</title>
 </head>
@@ -113,14 +132,18 @@ TO DO
 
 
             </div>
-            <div class="col-sm-6 d-flex align-items-center justify-content-center">Zmanim Goes Here</div>
+            <div class="col-sm-6 d-flex align-items-center justify-content-center ">Zmanim Goes Here</div>
         </div>
         <div class="row">
-            <div class="col-sm-3 d-flex align-items-center justify-content-center">Up Comming Events</div>
-            <div class="col-sm-3 d-flex align-items-center justify-content-center">Latest News - Mazal Tovs</div>
-            <div class="col-sm-6 d-flex align-items-center justify-content-center">Google Maps and Contact Info</div>
+            <div class="col-sm-3 d-flex align-items-center justify-content-center border border-secondary ">Up Comming Events</div>
+            <div class="col-sm-3 d-flex align-items-center justify-content-center border border-secondary">Latest News - Mazal Tovs</div>
+            <div class="col-sm-6 d-flex align-items-center justify-content-center border border-secondary"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.4958458105853!2d-73.95930858459789!3d40.618945679342175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c244b8ddb18e7b%3A0x1be4a56df22cf98c!2s1301%20E%2018th%20St%2C%20Brooklyn%2C%20NY%2011230!5e0!3m2!1sen!2sus!4v1571803745952!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+
+                                                                                                                                  
         </div>
     </div>
+                                                                             
     <h1>.</h1>
     <h1>.</h1>
 
