@@ -14,58 +14,72 @@ TO DO
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <style>
+        u:hover {
+            color: #007BFF;
+        }
+    </style>
+
     <title>Sign-In</title>
 </head>
 
-<!-- NAVBAR-->
-<nav class="navbar">
-    <!-- Image and text -->
-    <a class="navbar-brand text-secondary" href="homepage.html">
-        <img src="https://lh3.googleusercontent.com/kqsjzg_6YbhkZdI3eDT1ckmQGvI69vvP--zdf_Hlh3N84Ltyc2Mgw-IwKUtZa_Boew0" width="100" height="50" class="d-inline-block align-top" alt="">
-        Az Yashir Torah Center Youth
-    </a>
+<body>
+    <!-- NAVBAR-->
+    <nav class="navbar">
+        <!-- Image and text -->
+        <a class="navbar-brand text-secondary" href="homepage.html">
+            <img src="https://lh3.googleusercontent.com/kqsjzg_6YbhkZdI3eDT1ckmQGvI69vvP--zdf_Hlh3N84Ltyc2Mgw-IwKUtZa_Boew0" width="100" height="50" class="d-inline-block align-top" alt="">
+            Az Yashir Torah Center Youth
+        </a>
 
-</nav>
-
-
-<div class="container">
-    <div class="card border-primary mb-3" style="width: 21.5em;margin:0 auto;">
-        <div class="card-header text-center lead">Sign-In</div>
-        <div class="card-body">
-            <form>
-                <div class="form-group needs-validation">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address (required)">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password (required)">
-                    <a href="homepage.html" class="text-secondary d-flex justify-content-end"><u>Forgot password?</u></a>
-                </div>
+    </nav>
 
 
-                <div class="d-flex justify-content-center"><button type="submit" href="user.html" class="btn btn-primary">Submit</button></div>
+    <div class="container">
+        <div class="card border-primary mb-3" style="width: 21.5em;margin:0 auto;">
+            <div class="card-header text-center lead">Sign-In</div>
+            <div class="card-body">
+                <form id="form">
 
-                <hr class="my-4">
+                    
+                    <div class="form-row">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="email" data-parsley-trigger="change" required="" placeholder="Email address (required)" >
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
 
-                <small class="text-muted" d-flex>Don't have an account?</small>
-                <div class="d-flex justify-content-center pt-2"> <button type="submit" class="btn btn-outline-primary">Create Account</button></div>
-            </form>
+
+                    <div class="form-row">
+                        <label for="inputPassword">Password</label>
+                        <input pattern="^[a-zA-Z]*$" class="form-control" id="inputPassword" placeholder="Password (required)">
+                        <a href="homepage.html" class="text-secondary d-flex justify-content-end"><u>Forgot password?</u></a>
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-center"> <button type="submit" class="btn btn-primary" >Submit</button></div>
+                    <hr class="my-4">
+                    <small class="text-muted" d-flex>Don't have an account?</small>
+                    <div class="d-flex justify-content-center pt-2"> <button type="button" class="btn btn-outline-primary" onclick="alert('You clicked create account button')">Create Account</button></div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
 
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--    Parsley-->
+    <script src="parsley.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="parsley.css">
 
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body></html>
