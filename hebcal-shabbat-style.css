@@ -1,0 +1,38 @@
+.hebcal-container {
+    font-family: "Gill Sans MT", "Gill Sans", GillSans, Arial, Helvetica, sans-serif;
+    font-size: small;
+     text-align: center;
+}
+
+.hebcal-container h3 {
+    font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+    
+}
+
+ul.hebcal-results {
+    list-style-type: none
+}
+
+ul.hebcal-results li {
+    margin-bottom: 11px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.hebcal-results .candles {
+    color: red;
+    font-size: large
+}
+
+.hebcal-results .havdalah {
+    color: green
+}
+
+.hebcal-results .parashat {
+    color: black;
+}
+
+.hebcal-results .holiday {
+    display: none
+}

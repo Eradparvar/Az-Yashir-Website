@@ -1,0 +1,14 @@
+#thankYou {
+    background-image: url(Assets/thank%20you.png);
+    width: 559px;
+    height: 396px;
+    align-content: center;
+    display: block;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+
+}
+
+#navButton:hover {
+  color: #007BFF;
+}

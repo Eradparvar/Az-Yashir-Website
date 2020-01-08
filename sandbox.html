@@ -1,55 +1,39 @@
-<!--
-A class to play and test HTML, Javascript  and css
--->
-
 <!DOCTYPE html>
 <html>
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-
-    <title>Hello, world!</title>
-
+  <head>
+    <title>Jewish Calendar</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.5.0/fullcalendar.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.5.0/fullcalendar.min.js"></script>
+    <link href="hebcal-styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>hi</h1>
+    <div id="calendar"></div>
     <script>
         $(document).ready(function() {
-            $.ajax({
-                type: "post",
-                url: "http://api.openweathermap.org/data/2.5/weather?zip=11230,us&units=imperial&APPID=5025470bb3ac61b1ce9745600217ba8b",
-                beforeSend: function() {
-                    $("h1").html("Loading");
+            $("#calendar").fullCalendar({
+                header: {
+                    left: "prev,next today",
+                    center: "title",
+                    right: "month,agendaWeek,agendaDay"
                 },
-                timeout: 1000,
-                error: function(xhr, status, error) {
-                    alert("Error: " + xhr.status + " " + error);
-                },
-                datatype: "json",
-                success: function(json) {
-                    var resultsString = createWeatherString(json);
-                    console.log(resultsString);
-
+                editable: false,
+                fixedWeekCount: false,
+                timezone: false,
+                events: {
+                    url: "https://www.hebcal.com/hebcal/?cfg=fc&v=1&i=off&maj=on&min=on&nx=on&mf=on&ss=on&mod=on&lg=s&s=on",
+                    cache: true
                 }
             });
-
-            function createWeatherString(data) {
-                var cityName = data.name;
-                var temp = data.main.temp
-                var name = data.name;
-                var tempmin = data.temp_min;
-                var tempmax = data.temp_max;
-                return cityName;
-
-            }
+            $("body").keydown(function(e) {
+                if (e.keyCode == 37) {
+                    $('#calendar').fullCalendar('prev');
+                } else if (e.keyCode == 39) {
+                    $('#calendar').fullCalendar('next');
+                }
+            });
         });
     </script>
-
-</body>
-<footer>
-
-</footer></html>
+</body></html>
